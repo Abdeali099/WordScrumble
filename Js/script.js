@@ -14,11 +14,40 @@ let referesh=document.getElementById("referesh");
 // check button //
 let check=document.getElementById("check");
 
-let Correctword="";
+// Timing element //
+let timeText=document.getElementById("sec");
+
+let Correctword="",timer;
+
+// --------------------- Setting a TIme Limit --------------------- //
+
+const initTime= (maxTime) => {
+   
+    clearInterval(timer);
+
+    timer = setInterval(() => {
+        
+                  if (maxTime>0) {                  
+                    maxTime--;
+                    timeText.innerText=maxTime;
+                  }
+
+                  else
+                  {
+                     clearInterval(timer);
+                     alert(`Time Off! ${Correctword.toUpperCase()} was the correct word.`);
+                     initGame(); // Restat the game
+                  }
+
+    }, 1000);
+
+};
 
 // ---------------------  getting random objects from words --------------------- //
 
 const initGame = () => {
+
+    initTime(30);
 
     let randomObj = words[Math.floor(Math.random()*(words.length))];
     //  it will generate 0 to length-1 number
@@ -60,10 +89,12 @@ const initGame = () => {
 initGame();
 
  //  lets referseh a word by a button //
+   
  referesh.addEventListener('click',initGame);
 
 
 //  at time input convert to uppercase automatic //
+
 input.addEventListener('keyup',()=>{
     let Ip=input.value.toUpperCase();
     input.value=Ip;
@@ -93,9 +124,7 @@ input.addEventListener('keyup',()=>{
         alert(`Congrats ! ${userIp.toUpperCase()} is  a Correct word !`);
         input.value="";
         initGame();
-     }
-
-     
+     }    
 
  };
 
