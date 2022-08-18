@@ -92,7 +92,9 @@ body {
         font-size: 18px;
         padding: 0 16px;
         border-radius: 5px;
-        border: 1px solid #aaa;
+        border: 1px solid #aaa;       
+        letter-spacing: 11px;
+
 }
 
 /* -------------- Styling in Button Area --------------*/
