@@ -47,7 +47,9 @@ const initTime= (maxTime) => {
 
 const initGame = () => {
 
-    initTime(30);
+    // initTime(30);
+    input.value="";
+
 
     let randomObj = words[Math.floor(Math.random()*(words.length))];
     //  it will generate 0 to length-1 number
