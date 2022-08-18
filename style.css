@@ -119,11 +119,23 @@ button{
 }
 /* styling in refresh */
 #referesh{
-background-color: #6c757d;
+    background-color:#34414d;
 }
+
+#referesh:hover{
+    background-color: #252c33;
+}
+
 /* styling in check */
 #check{
 background-color:#5372F0;
 }
+
+#check:hover{
+background-color:#3e52a1;
+}
+
+
+
 
 /* -------------- Helper classes --------------*/
