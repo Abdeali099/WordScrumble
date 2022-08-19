@@ -26,6 +26,8 @@ body {
     border-radius: 7px;
     background-color: #fff;
     box-shadow: 9px 10px 4px 2px #484848;
+    /* opacity: .1; */
+    /* visibility: hidden; */
 }
 
 /* stylinh in head part */
