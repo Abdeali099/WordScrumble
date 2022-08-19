@@ -17,6 +17,12 @@ let check=document.getElementById("check");
 // Timing element //
 let timeText=document.getElementById("sec");
 
+// score 
+let ScoreText=document.getElementById("score");
+let score=100;
+
+
+
 let Correctword="",timer;
 
 // --------------------- Setting a TIme Limit --------------------- //
@@ -35,7 +41,9 @@ const initTime= (maxTime) => {
                   else
                   {
                      clearInterval(timer);
-                     alert(`Time Off! ${Correctword.toUpperCase()} was the correct word.`);
+                     alert(`Time Off! ${Correctword.toUpperCase()} was the correct word. \n Your Score : ${score}`);
+                     score=100;
+                     ScoreText.innerText=score;
                      initGame(); // Restat the game
                   }
 
@@ -47,7 +55,7 @@ const initTime= (maxTime) => {
 
 const initGame = () => {
 
-    // initTime(30);
+    initTime(30);
     input.value="";
 
 
@@ -59,8 +67,8 @@ const initGame = () => {
 
     // console.log(wordArray);
     // console.log(randomObj);
-    console.log(randomObj.word);
-    console.log(randomObj.hint);
+    // console.log(randomObj.word);
+    // console.log(randomObj.hint);
 
     let shuffelArray=[...wordArray]; // shallow copy (it will shave random letter)
 
@@ -74,7 +82,7 @@ const initGame = () => {
         // Swapping two value of array element
      }
 
-          console.log(shuffelArray);
+        //   console.log(shuffelArray);
 
      // --------- Now we have to show this to a user --------- //
 
@@ -106,8 +114,8 @@ input.addEventListener('keyup',()=>{
 
  const checkWord = () =>{                  
      let userIp=input.value.toLocaleLowerCase(); // getting user value
-     console.log(userIp);
-     console.log(Correctword);
+    //  console.log(userIp);
+    //  console.log(Correctword);
 
 
      if (userIp==="")
@@ -119,12 +127,25 @@ input.addEventListener('keyup',()=>{
      {
         alert(`Oops! ${userIp} is not a Correct word !`);
         input.value="";
+        score=score-50;
+        
+        if (score<0) {
+           score=100;
+           alert(`Oops Game Over ! \n ${Correctword.toUpperCase()} was the correct word. \n Your Score : ${score}`);
+           ScoreText.innerText=score;
+           initGame();
+         }
+         
+         ScoreText.innerText=score;
      } 
 
      else
      {
         alert(`Congrats ! ${userIp.toUpperCase()} is  a Correct word !`);
         input.value="";
+
+        score=score+100;
+        ScoreText.innerText=score;
         initGame();
      }    
 

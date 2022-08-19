@@ -1,64 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Word-Scramble</title>
-    <link rel = "icon" href = "./Images/scrabble.png"  type = "image/x-icon">
+    <link rel="icon" href="./Images/scrabble.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
-    <script src="./Js/word.js" defer></script>  <!-- Need On Top  -->
-    
+    <script src="./Js/word.js" defer></script> <!-- Need On Top  -->
+
     <script src="./Js/script.js" defer></script>
 
 </head>
+
 <body>
-    
-<!-- Main Container -->
 
-<div class="Container">
+    <!-- Main Container -->
 
-    <h2>Word Scramble</h2>
+    <div class="Container">
 
-    <hr>
+        <div class="heading">
 
-    <!-- Content Part -->
+            <h2>Word Scramble</h2>
 
-    <div class="Content">
+            <!-- score part -->
+            <div class="score-container">
 
-        <p class="Word" id="word">enaxpnios</p>
-
-        <!-- Details part  -->
-
-        <div class="Details">
-
-            <!-- Hint paragraph -->
-
-            <p class="Hint"> Hint : <span id="hints">The Process of increase of grow</span> </p>
- 
-            <!-- Time paragraph -->
-
-            <p class="Time">Time Left : <span> <b id="sec">30</b>s</span> </p>
+                 <div class="score">Score : <span id="score"> 100 </span></div> 
+            </div>
 
         </div>
 
+        <hr>
+
+        <!-- Content Part -->
+
+        <div class="Content">
+
+            <p class="Word" id="word">enaxpnios</p>
+
+            <!-- Details part  -->
+
+            <div class="Details">
+
+                <!-- Hint paragraph -->
+
+                <p class="Hint"> Hint : <span id="hints">The Process of increase of grow</span> </p>
+
+                <!-- Time paragraph -->
+
+                <p class="Time">Time Left : <span> <b id="sec">30</b>s</span> </p>
+
+            </div>
+
             <!-- Input : word -->
-        <input type="text" id="input" placeholder="Enter a valid word">
+            <input type="text" id="input" placeholder="Enter a valid word" autofocus>
 
 
-        <!-- Button part -->
+            <!-- Button part -->
 
-        <div class="Buttons">
+            <div class="Buttons">
 
-            <button id="referesh">Refresh Word</button>
-            <button id="check">Check Word</button>
+                <button id="referesh">Refresh Word</button>
+                <button id="check">Check Word</button>
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
-
 </body>
+
 </html>

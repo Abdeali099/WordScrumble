@@ -28,6 +28,29 @@ body {
     box-shadow: 9px 10px 4px 2px #484848;
 }
 
+/* stylinh in head part */
+.heading{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score-container{
+    /* border: 1px solid red; */
+    align-self: end;
+    margin-bottom: 7px;
+    margin-right: 25px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#score{
+    font-weight: 300;
+}
+
+
+
 /* styling in hadding */
 
 .Container h2 {
