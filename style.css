@@ -47,6 +47,17 @@ body {
     font-weight: 700;
 }
 
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.score img{
+ width: 25px;
+}
+
 #score{
     font-weight: 300;
 }
