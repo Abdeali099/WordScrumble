@@ -55,7 +55,7 @@ const initTime= (maxTime) => {
 
 const initGame = () => {
 
-    initTime(30);
+   //  initTime(30);
     input.value="";
 
 
