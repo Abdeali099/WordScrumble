@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Help{
+    /* background-color: brown; */
+    background: url(./Images/icons8-help-64.png)no-repeat center center/cover;
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    top: 20.5%;
+    left: 64.3%;
+
+    /* top: 20.5%;
+    left: 64.3%; */
+    border-radius: 100%;
+    box-shadow: 2px 2px 3px rgb(0 0 0 / 50%);
+}
+
+.imgHelp{
+   background: url(./Images/help1.jpg)no-repeat center center/cover;
+    width: 359px;
+    height: 351px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 80%);
+    position: absolute;
+    
+    /* top: 70%;
+    left: 101%; */
+
+    top: 105%;
+    left: 12%;
+
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+.Open-help{
+    visibility: visible;    
+    top: 70%;
+    left: 101%;
+    /* transform: translate(5%,5%); */
+    transition: all 0.5s;
+}

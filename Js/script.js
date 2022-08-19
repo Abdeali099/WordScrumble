@@ -77,7 +77,7 @@ const initTime = (maxTime) => {
 
 const initGame = () => {
 
-   //  initTime(30);
+    initTime(30);
    input.value = "";
 
 
@@ -117,7 +117,7 @@ const initGame = () => {
 
 };
 
-initGame();
+initGame(); // Game Start from here //
 
 //  lets referseh a word by a button //
 
@@ -158,16 +158,16 @@ const checkWord = () => {
 
 
       if (score < 0) {
-         score = 100;
          //   alert(`Oops Game Over ! \n ${Correctword.toUpperCase()} was the correct word. \n Your Score : ${score}`);
-
+         
          // -- Open Popup --  //
          clearInterval(timer);
          popStatus.innerText = "Oops!  Game Over !!";
          popCorrect.innerText = `${Correctword.toUpperCase()}`;
          popScore.innerText = score;
          popContainer.classList.add("Open-Popup");
-
+         
+         score = 100;
          ScoreText.innerText = score;
       }
       initGame();
@@ -207,4 +207,35 @@ const Close = () => {
 
 btnOk.addEventListener('click', Close);
 
+// ------------------------ Helping part -------------------------- //
 
+let helpContainer=document.getElementById("help");
+let imgHelp=document.getElementsByClassName("imgHelp")[0];
+let flag=1;
+
+const OpenImg = () => {
+
+   // console.log("works");
+
+   if (flag==1) {
+      
+      imgHelp.classList.add("Open-help");
+      flag=0;
+
+      setTimeout(() => {
+      imgHelp.classList.remove("Open-help");
+      flag=1;
+      }, 10000);
+
+   }
+
+   else
+   {
+      imgHelp.classList.remove("Open-help");
+      flag=1;
+   }
+    
+};
+
+
+helpContainer.addEventListener('click',OpenImg);
